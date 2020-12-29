@@ -7,11 +7,11 @@ function App() {
     e.preventDefault();
     const headers = {
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM2M2Q1ZWY4OGFmYTU2MDkzY2Y5NzAiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MDcwMDgxNTUsImV4cCI6MTYwNzA5NDU1NX0.qhXeK48puk2dXqgdZovGSvPp5X5iAA9g2NA75k8RKiY",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmM0YTNiOWJjYmFlMjM1NDg0ZWU2NDgiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2MDkyNDMzMjgsImV4cCI6MTYwOTMyOTcyOH0.KRGveLHlOz0Z9ZRwfwfH7LA3YYtLEGAO4M7ozE3Av0s",
       "Content-Type": "application/json",
     };
 
-    const API_URL = "http://localhost:4000/payments";
+    const API_URL = "http://134.209.148.127:8080/payments";
     const orderUrl = `${API_URL}/orders`;
     const response = await Axios.request({
       url: orderUrl,
@@ -24,7 +24,7 @@ function App() {
     });
     const { data } = response;
     const options = {
-      key: "rzp_test_d9VJn7AdalPUKG",
+      key: "rzp_test_AnaETLhxHO5yYf",
       name: "Your App Name",
       description: "Some Description",
       order_id: data.id,
